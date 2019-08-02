@@ -1,0 +1,15 @@
+{
+  "editor.tabSize": 2,
+  "window.zoomLevel": 0,
+  // "files.encoding": "gbk",
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "editor.formatOnType": true, //编辑器是否应在键入后自动设置行的格式
+  "editor.formatOnSave": true, //编辑器是否保存时自动格式
+  "prettier.disableLanguages": []
+}

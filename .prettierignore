@@ -1,0 +1,5 @@
+node_components
+.nuxt
+dist
+static
+.vscode
