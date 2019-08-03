@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    <NuxtLink :to="'/apis'">link to apis</NuxtLink>
+    <ul>
+      <li>
+        <NuxtLink :to="'/documents'">link to documents page</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink :to="'/test'">link to test page</NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
 

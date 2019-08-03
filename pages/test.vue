@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <ul>
-      <li v-for="api of apis" :key="api">{{ api }}</li>
+      <li v-for="a of aas" :key="a">{{ a }}</li>
     </ul>
   </div>
 </template>
@@ -12,13 +12,13 @@ import { mapGetters } from 'vuex'
 
 @Component({
   async asyncData({ store }) {
-    await store.dispatch('apis/get')
+    await store.dispatch('get')
   },
   computed: {
     ...mapGetters({
-      apis: 'apis/apis'
+      aas: 'aas'
     })
   }
 })
-export default class HospitalsPage extends Vue {}
+export default class TestPage extends Vue {}
 </script>

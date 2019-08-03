@@ -21,7 +21,8 @@ const config: NuxtConfiguration = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  // loading: { color: '#f00' },
+  loading: '~/components/Loading.vue',
   /*
    ** Global CSS
    */
@@ -29,7 +30,7 @@ const config: NuxtConfiguration = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/element-ui'],
+  plugins: ['@/plugins/element-ui', '@/plugins/axios'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -44,19 +45,30 @@ const config: NuxtConfiguration = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
+    // '@nuxtjs/proxy'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    // proxy: false
+  },
+  // proxy: {
+  //   '/api': {
+  //     target: 'http://example.com',
+  //     pathRewrite: {
+  //       '^/api': '/'
+  //     }
+  //   }
+  // },
   /*
    ** Build configuration
    */
   build: {
-    analyze: {
-      analyzerMode: 'static'
-    },
+    // analyze: {
+    //   analyzerMode: 'static'
+    // },
     transpile: [/^element-ui/],
     /*
      ** You can extend webpack config here
