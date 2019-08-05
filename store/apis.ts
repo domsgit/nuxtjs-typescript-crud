@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 export const state = () => ({
   oApis: {}
 })
@@ -16,9 +14,11 @@ export const mutations = {
 
 export const actions = {
   get({ commit }) {
-    return axios.get(`https://api.github.com`).then(({ data }) => {
-      commit('set', data)
-      return data
-    })
+    return (this as any).$axios
+      .get(`https://github.com/topics`)
+      .then(({ data }) => {
+        commit('set', data)
+        return data
+      })
   }
 }

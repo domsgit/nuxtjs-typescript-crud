@@ -1,7 +1,12 @@
-export default function({ $axios, redirect }) {
+import axios from 'axios'
+
+axios.defaults.baseURL = 'https://zh.nuxtjs.org/api'
+axios.defaults.timeout = 600000
+
+export default function({ $axios, redirect }, inject) {
   $axios.onRequest((config) => {
-    alert('before request')
     console.log('Making request to ' + config.url)
+    return config
   })
 
   $axios.onError((error) => {
@@ -10,4 +15,6 @@ export default function({ $axios, redirect }) {
       redirect('/400')
     }
   })
+
+  inject('$axios', $axios)
 }

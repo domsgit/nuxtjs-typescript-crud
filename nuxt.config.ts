@@ -44,24 +44,24 @@ const config: NuxtConfiguration = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
-    // '@nuxtjs/proxy'
+    '@nuxtjs/pwa',
+    '@nuxtjs/proxy'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    // proxy: false
+    proxy: true
   },
-  // proxy: {
-  //   '/api': {
-  //     target: 'http://example.com',
-  //     pathRewrite: {
-  //       '^/api': '/'
-  //     }
-  //   }
-  // },
+  proxy: {
+    '/api': {
+      target: 'https://zh.nuxtjs.org/api',
+      pathRewrite: {
+        '^/api': '/'
+      }
+    }
+  },
   /*
    ** Build configuration
    */
